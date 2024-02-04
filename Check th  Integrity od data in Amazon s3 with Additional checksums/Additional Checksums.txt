@@ -1,0 +1,24 @@
+ 
+      Check the Integrity of Data in Amazon s3 with Additional Checksums
+
+>Create an S3 bucket
+  =Enter a descriptive globally unique name for your bucket
+  =Select the Region you would like your bucket to reside in
+  =Block Public Access is appropriate for this workload, so leave this section as is.
+  =Leave remaining options as default
+>Upload a file and specify the checksum algorithm
+  =Choose the Add files button and then select the file you would like to upload from your file
+   browser.
+  =Navigate down the page to find the Properties section. Then, select Properties and expand the
+   section.
+  =Under Additional checksums select the On option and choose SHA-256.
+  =Navigate down the page and choose the Upload button.
+>Verify checksum
+  =Select the uploaded file by selecting the filename
+  =Locate the checksum value
+  =Compare the object to your local computer
+  =Use a utility like shasum to calculate the file.
+  =When comparing this value, it should match the value in the S3 console
+>Clean up
+  =Delete test object
+  =Delete test bucket
